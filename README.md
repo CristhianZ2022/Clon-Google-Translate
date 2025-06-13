@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# 📖 Clon Google Translate
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un clon funcional de Google Translate utilizando React y OpenAI para traducción de texto.
 
-Currently, two official plugins are available:
+## 🚀 Características
+- Traducción automática entre múltiples idiomas.
+- Integración con OpenAI para mejorar la precisión.
+- Interfaz sencilla y fácil de usar con Bootstrap.
+- Síntesis de voz para leer las traducciones en voz alta.
+- Selector de idioma con una interfaz interactiva.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Instalación
 
-## Expanding the ESLint configuration
+Clona el repositorio:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+git clone https://github.com/CristhianZ2022/Clon-Google-Translate.git
+cd Clon-Google-Translate
+Instala las dependencias:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm install
+Configura la API Key de OpenAI en un archivo .env:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+VITE_OPENAI_API_KEY=tu_api_key_aqui
+Ejecuta la aplicación:
+
+
+npm run dev
+
+🛠 Tecnologías Utilizadas
+React - Framework frontend.
+
+OpenAI API - Traducción inteligente.
+
+Bootstrap - Estilización rápida.
+
+Vite - Entorno de desarrollo rápido.
+
+🏗 Estructura del Proyecto
+Clon-Google-Translate/
+│── src/
+│   ├── components/
+│   │   ├── LanguageSelector.tsx
+│   │   ├── Icons.tsx
+│   ├── hooks/
+│   │   ├── useStore.ts
+│   ├── constans.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│── public/
+│── package.json
